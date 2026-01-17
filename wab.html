@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    翻页效果电子书
+  </title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+  <style>
+    body { display: flex;
+         justify-content: center; 
+         padding: 40px; 
+         background: #eee; }
+    #book { width: 800px; 
+        height: 500px; }
+    #book .page { width: 400px;
+         height: 500px; }
+    #book .page img { width: 100%;
+         height: 100%; 
+         object-fit: cover; }
+  </style>
+</head>
+<body>
+  <div id="book">
+    <div class="page">
+        <img src="photos/01.jpg" alt="Page 1">
+    </div>
+    <div class="page">
+        <img src="photos/02.jpg" alt="Page 2">
+    </div>
+    <div class="page">
+        <img src="photos/300.jpg" alt="Page 3">
+    </div>
+    <div class="page">
+        <img src="photos/04.png" alt="Page 4">
+    </div>
+  </div>
+
+  <script>
+    $("#book").turn({
+      width: 1000,
+      height: 600,
+      autoCenter: true
+    });
+  </script>
+</body>
+</html>
